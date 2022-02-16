@@ -15,6 +15,7 @@ modules/.settings
 modules/.vscode
 .vimrc
 .nvimrc
+.eslintcache
 
 # Ignore npm/yarn debug log
 npm-debug.log
@@ -25,3 +26,6 @@ yarn-error.log
 
 # Husky
 .husky/_
+
+# NX cache
+.angular/

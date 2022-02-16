@@ -1,0 +1,109 @@
+{
+  "projectType": "application",
+  "root": "apps/osm-shell",
+  "sourceRoot": "apps/osm-shell/src",
+  "prefix": "osm",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/osm-shell",
+        "index": "apps/osm-shell/src/index.html",
+        "main": "apps/osm-shell/src/main.ts",
+        "polyfills": "apps/osm-shell/src/polyfills.ts",
+        "tsConfig": "apps/osm-shell/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/osm-shell/src/favicon.ico",
+          "apps/osm-shell/src/assets"
+        ],
+        "styles": ["apps/osm-shell/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/osm-shell/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/osm-shell/src/environments/environment.ts",
+              "with": "apps/osm-shell/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/osm-shell/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "osm-shell:build:production"
+        },
+        "development": {
+          "browserTarget": "osm-shell:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "publicHost": "http://localhost:4200"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "osm-shell:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/osm-shell/src/**/*.ts",
+          "apps/osm-shell/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/osm-shell"],
+      "options": {
+        "jestConfig": "apps/osm-shell/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve-mfe": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["nx serve osm-login", "nx serve osm-shell"]
+      }
+    }
+  },
+  "tags": ["type:app"]
+}
