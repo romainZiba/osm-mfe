@@ -18,7 +18,10 @@
           "apps/osm-shell/src/favicon.ico",
           "apps/osm-shell/src/assets"
         ],
-        "styles": ["apps/osm-shell/src/styles.scss"],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+          "apps/osm-shell/src/styles.scss"
+        ],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/osm-shell/webpack.config.js"
