@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-import {UserService} from '@osm-mfe/shared/data-access-user';
-import {distinctUntilChanged} from 'rxjs/operators';
+import { UserService } from '@osm-mfe/shared/data-access-user';
+import { distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'osm-shell-root',

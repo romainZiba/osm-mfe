@@ -14,7 +14,12 @@
             "depConstraints": [
               {
                 "sourceTag": "app",
-                "onlyDependOnLibsWithTags": ["feature","data-access", "util", "ui"]
+                "onlyDependOnLibsWithTags": [
+                  "feature",
+                  "data-access",
+                  "util",
+                  "ui"
+                ]
               },
               {
                 "sourceTag": "*",

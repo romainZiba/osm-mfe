@@ -22,7 +22,7 @@ sharedMappings.register(
   tsConfigPath,
   [
     /* mapped paths to share */
-    '@osm-mfe/shared/data-access-user'
+    '@osm-mfe/shared/data-access-user',
   ],
   workspaceRootPath
 );

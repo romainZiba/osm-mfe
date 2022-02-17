@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {UserService} from '@osm-mfe/shared/data-access-user';
+import { Component } from '@angular/core';
+import { UserService } from '@osm-mfe/shared/data-access-user';
 
 @Component({
   selector: 'osm-mfe-login-entry',
