@@ -5,6 +5,7 @@
     "osm-login-e2e": "apps/osm-login-e2e",
     "osm-shell": "apps/osm-shell",
     "osm-shell-e2e": "apps/osm-shell-e2e",
-    "shared-data-access-user": "libs/shared/data-access-user"
+    "shared-data-access-user": "libs/shared/data-access-user",
+    "shared-util": "libs/shared/util"
   }
 }
