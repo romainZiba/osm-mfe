@@ -17,6 +17,10 @@
     "paths": {
       "@osm-mfe/shared/data-access-user": [
         "libs/shared/data-access-user/src/index.ts"
+      ],
+      "@osm-mfe/shared/util": ["libs/shared/util/src/index.ts"],
+      "@osm-mfe/shared/util/app-initializers": [
+        "libs/shared/util/app-initializers/src/index.ts"
       ]
     }
   },
