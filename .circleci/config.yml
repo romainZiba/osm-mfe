@@ -11,9 +11,9 @@ jobs:
       - checkout
       - run: npm install
       - nx/set-shas
-      - run: npx nx affected --base=$NX_BASE --target=build --parallel=3
-      - run: npx nx affected --base=$NX_BASE --target=lint --parallel=2
-      - run: npx nx affected --base=$NX_BASE --target=test --parallel=2
+      - run: npm run build:all
+      - run: npm run affected:test -- --base=$NX_BASE
+      - run: npm run affected:lint -- --base=$NX_BASE
       - run: sudo npm install -g @lhci/cli@0.8.x
       - run: lhci autorun
   pr:
@@ -25,9 +25,9 @@ jobs:
       - run: google-chrome --version
       - run: npm install
       - nx/set-shas
-      - run: npx nx affected --all --target=build --parallel=3
-      - run: npx nx affected --base=$NX_BASE --target=lint --parallel=2
-      - run: npx nx affected --base=$NX_BASE --target=test --parallel=2
+      - run: npm run build:all
+      - run: npm run affected:test -- --base=$NX_BASE
+      - run: npm run affected:lint -- --base=$NX_BASE
       - run: sudo npm install -g @lhci/cli@0.8.x
       - run: lhci autorun
 workflows:
