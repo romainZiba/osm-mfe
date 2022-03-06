@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/movies",
+  "sourceRoot": "libs/movies/src",
+  "prefix": "mov",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/movies"],
+      "options": {
+        "jestConfig": "libs/movies/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/movies/src/**/*.ts",
+          "libs/movies/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

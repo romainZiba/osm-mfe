@@ -1,6 +1,34 @@
 :host {
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    'header header header'
+    'nav main main'
+    'footer footer footer';
+  align-items: stretch;
+  grid-template-rows: 60px 1fr 60px;
+
+  > header {
+    grid-area: header;
+    max-height: 100px;
+  }
+
+  > nav {
+    grid-area: nav;
+  }
+
+  > main {
+    grid-area: main;
+  }
+
+  > footer {
+    grid-area: footer;
+  }
+
+  > header,
+  > footer {
+    background-color: cornflowerblue;
+  }
 }
 
 .dashboard-nav {

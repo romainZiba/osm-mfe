@@ -1,5 +1,12 @@
-<div class="dashboard-nav">Admin Dashboard</div>
-<div *ngIf="isLoggedIn$ | async; else signIn">
-  You are authenticated so you can see this content.
-</div>
-<ng-template #signIn><router-outlet></router-outlet></ng-template>
+<header>Welcome in this shell application</header>
+<nav>
+  <ul>
+    <li>
+      <a [routerLink]="movies">Movies</a>
+    </li>
+  </ul>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>Contact: romain.ziba@gmail.com</footer>

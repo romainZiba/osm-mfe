@@ -1,0 +1,28 @@
+{
+  "root": "apps/osm-movies-e2e",
+  "sourceRoot": "apps/osm-movies-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/osm-movies-e2e/cypress.json",
+        "devServerTarget": "osm-movies:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "osm-movies:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/osm-movies-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["osm-movies"]
+}

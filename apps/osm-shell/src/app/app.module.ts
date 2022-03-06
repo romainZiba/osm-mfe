@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { scheduledAppInitializerProvider } from '@osm-mfe/shared/util/app-initializers';
 import { AppComponent } from './app.component';
+import { MOVIES } from './routes';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,9 +13,9 @@ import { AppComponent } from './app.component';
     RouterModule.forRoot(
       [
         {
-          path: 'login',
+          path: MOVIES,
           loadChildren: () =>
-            import('osm-login/Module').then((m) => m.RemoteEntryModule),
+            import('osm-movies/Module').then((m) => m.RemoteEntryModule),
         },
       ],
       { initialNavigation: 'disabled', useHash: true }

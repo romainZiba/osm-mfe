@@ -1,1 +1,1 @@
-declare module 'osm-login/Module';
+declare module 'osm-movies/Module';

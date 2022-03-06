@@ -16,5 +16,5 @@ app1
 app2
   .use(cors())
   .use(compression())
-  .use(express.static('./dist/apps/osm-login'))
+  .use(express.static('./dist/apps/osm-movies'))
   .listen(port2);

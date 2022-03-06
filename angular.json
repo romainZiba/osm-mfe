@@ -1,11 +1,11 @@
 {
   "version": 2,
   "projects": {
-    "osm-login": "apps/osm-login",
-    "osm-login-e2e": "apps/osm-login-e2e",
+    "movies": "libs/movies",
+    "osm-movies": "apps/osm-movies",
+    "osm-movies-e2e": "apps/osm-movies-e2e",
     "osm-shell": "apps/osm-shell",
     "osm-shell-e2e": "apps/osm-shell-e2e",
-    "shared-data-access-user": "libs/shared/data-access-user",
     "shared-util": "libs/shared/util"
   }
 }

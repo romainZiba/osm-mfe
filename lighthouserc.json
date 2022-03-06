@@ -1,7 +1,7 @@
 {
   "ci": {
     "collect": {
-      "url": ["http://localhost:4200"],
+      "url": ["http://localhost:4200", "http://localhost:4200/#/movies"],
       "startServerCommand": "npm run serve:production"
     },
     "upload": {

@@ -76,7 +76,7 @@
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
     "*.{js,ts,css,scss,md,json,html}": "prettier --write",
-    "*.{scss}": "stylelint"
+    "*.scss": "stylelint"
   },
   "config": {
     "commitizen": {

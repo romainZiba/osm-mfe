@@ -28,7 +28,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: 'osm-shell',
+    uniqueName: 'osm-movies',
     publicPath: 'auto',
   },
   optimization: {
@@ -44,8 +44,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      remotes: {
-        'osm-movies': 'http://localhost:4202/remoteEntry.js',
+      name: 'osm-movies',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './Module': 'apps/osm-movies/src/app/remote-entry/entry.module.ts',
       },
       shared: share({
         '@angular/core': {
